@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Header () {
   return (
@@ -14,6 +15,8 @@ function Header () {
       `}
       </style>
       <h2 className='header'>Avery's Organic Farm</h2>
+      <button><Link to='/'>Products</Link></button>
+      <button><Link to='/schedule'>Schedule</Link></button>
     </div>
   );
 }

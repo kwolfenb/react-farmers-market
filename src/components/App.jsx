@@ -2,13 +2,16 @@ import React from 'react';
 import Schedule from './Schedule';
 import Header from './Header';
 import ProductList from './ProductList';
+import { Switch, Route } from 'react-router-dom';
 
-function App(){
+function App() {
   return (
     <div>
       <Header />
-      <ProductList />
-      <Schedule />
+      <Switch>
+        <Route exact path='/' component={ProductList} />
+        <Route exact path='/schedule' component={Schedule} />
+      </Switch>
     </div>
   );
 }
